@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "2026.11.27",
+  "locale": "fa-IR",
+  "rules": {
+    "severeConditionsFa": "تاکسی و مسافرکشی، ترافیک سنگین شهری، مسیرهای کوتاه، گردوغبار، هوای بالای ۳۲ درجه، یا روغن معدنی/نیمه‌سنتتیک",
+    "dueRuleFa": "هر کدام از کیلومتر یا زمان زودتر برسد"
+  },
+  "makers": [
+    { "id": "ikco", "nameFa": "ایران‌خودرو", "roadsidePhone": "096440" },
+    { "id": "saipa", "nameFa": "سایپا", "roadsidePhone": "096550" },
+    { "id": "parskhodro", "nameFa": "پارس‌خودرو (گروه سایپا)", "roadsidePhone": "096550" },
+    { "id": "zamyad", "nameFa": "زامیاد (گروه سایپا)", "roadsidePhone": "096550" }
+  ],
+  "parts": [
+    { "id": "engine_oil", "nameFa": "روغن موتور و فیلتر روغن" },
+    { "id": "air_filter", "nameFa": "فیلتر هوا" },
+    { "id": "cabin_filter", "nameFa": "فیلتر کابین" },
+    { "id": "fuel_filter", "nameFa": "فیلتر بنزین" },
+    { "id": "fuel_filter_in_tank", "nameFa": "فیلتر بنزین داخل باک" },
+    { "id": "spark_plugs", "nameFa": "شمع" },
+    { "id": "timing_belt", "nameFa": "تسمه تایم" },
+    { "id": "timing_and_accessory_belt", "nameFa": "تسمه تایم و تسمه دینام" },
+    { "id": "accessory_belt", "nameFa": "تسمه دینام" },
+    { "id": "belts", "nameFa": "تسمه‌ها" },
+    { "id": "timing_chain", "nameFa": "زنجیر تایم" },
+    { "id": "brake_fluid", "nameFa": "روغن ترمز" },
+    { "id": "coolant", "nameFa": "ضدیخ" },
+    { "id": "manual_gearbox_oil", "nameFa": "روغن گیربکس دستی" },
+    { "id": "automatic_gearbox_oil", "nameFa": "روغن گیربکس اتوماتیک" },
+    { "id": "cvt_oil", "nameFa": "روغن گیربکس CVT و فیلتر" },
+    { "id": "gearbox_oil", "nameFa": "روغن گیربکس" },
+    { "id": "differential_oil", "nameFa": "روغن دیفرانسیل" },
+    { "id": "power_steering_fluid", "nameFa": "روغن هیدرولیک فرمان" },
+    { "id": "front_brake_pads", "nameFa": "لنت ترمز جلو" },
+    { "id": "catalytic_converter", "nameFa": "کاتالیست" },
+    { "id": "battery", "nameFa": "باتری" },
+    { "id": "tire_rotation", "nameFa": "جابه‌جایی لاستیک‌ها" },
+    { "id": "filters_and_plugs", "nameFa": "فیلتر هوا، کابین، بنزین و شمع" }
+  ],
+  "vehicleGroups": [
+    {
+      "id": "saipa-quick-family",
+      "makerId": "saipa",
+      "models": [
+        { "id": "quick", "nameFa": "کوییک" },
+        { "id": "saina", "nameFa": "ساینا" },
+        { "id": "tiba", "nameFa": "تیبا" }
+      ],
+      "confidence": "official",
+      "sourceFa": "دفترچه کوییک ۱۴۰۳ + بخشنامه سایپا یدک",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 5000, "months": 6 }, "severe": { "km": 5000, "months": 6 }, "noteFa": "دفترچه ۱۰۰۰۰ کیلومتر/۱۲ ماه؛ بخشنامه جدید سایپا یدک ۵۰۰۰/۶ ماه" },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 20000, "months": 24 }, "noteFa": "شرایط سخت: زودتر" },
+        { "partId": "cabin_filter", "action": "replace", "normal": { "km": 10000, "months": 12 }, "noteFa": "در صورت نصب" },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 40000 }, "noteFa": "بیرون باک" },
+        { "partId": "fuel_filter_in_tank", "action": "replace", "normal": { "km": 160000 } },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 40000 }, "noteFa": "۴۰ تا ۵۰ هزار؛ شرایط سخت زودتر" },
+        { "partId": "timing_belt", "action": "replace", "normal": { "km": 60000, "months": 72 }, "severe": { "km": 40000 } },
+        { "partId": "accessory_belt", "action": "replace", "normal": { "km": 40000, "months": 48 }, "noteFa": "بازدید هر ۱۰۰۰۰ کیلومتر" },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 60000, "months": 72 }, "noteFa": "بازدید هر ۱۰۰۰۰ کیلومتر" },
+        { "partId": "coolant", "action": "replace", "normal": { "km": 60000, "months": 36 } },
+        { "partId": "manual_gearbox_oil", "action": "replace", "normal": { "km": 30000, "months": 36 } },
+        { "partId": "automatic_gearbox_oil", "action": "replace", "normal": { "km": 60000, "months": 24 }, "noteFa": "به‌همراه فیلتر و واشر کارتر؛ چک هر ۳۰۰۰۰ کیلومتر" },
+        { "partId": "power_steering_fluid", "action": "replace", "normal": { "km": 60000, "months": 72 } },
+        { "partId": "front_brake_pads", "action": "inspect", "normal": { "km": 10000, "months": 12 }, "noteFa": "تعویض بر اساس سایش" },
+        { "partId": "catalytic_converter", "action": "replace", "normal": { "km": 100000 } }
+      ]
+    },
+    {
+      "id": "saipa-atlas",
+      "makerId": "saipa",
+      "models": [{ "id": "atlas", "nameFa": "اطلس" }],
+      "confidence": "official",
+      "sourceFa": "دفترچه اطلس",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 10000, "months": 12 }, "severe": { "km": 5000, "months": 6 } },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 20000, "months": 24 } },
+        { "partId": "cabin_filter", "action": "replace", "normal": { "km": 10000, "months": 12 } },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 40000 } },
+        { "partId": "fuel_filter_in_tank", "action": "replace", "normal": { "km": 160000 } },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 40000 } },
+        { "partId": "timing_belt", "action": "replace", "normal": { "km": 60000, "months": 72 }, "severe": { "km": 40000 } },
+        { "partId": "accessory_belt", "action": "replace", "normal": { "km": 40000, "months": 48 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 60000, "months": 72 } },
+        { "partId": "coolant", "action": "replace", "normal": { "km": 60000, "months": 36 } },
+        { "partId": "manual_gearbox_oil", "action": "replace", "normal": { "km": 30000, "months": 36 } },
+        { "partId": "automatic_gearbox_oil", "action": "replace", "normal": { "km": 60000, "months": 24 } },
+        { "partId": "power_steering_fluid", "action": "replace", "normal": { "km": 60000, "months": 72 } }
+      ]
+    },
+    {
+      "id": "saipa-shahin",
+      "makerId": "saipa",
+      "models": [{ "id": "shahin", "nameFa": "شاهین" }],
+      "confidence": "official",
+      "sourceFa": "دفترچه شاهین ۱۴۰۳",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 5000, "months": 6 }, "severe": { "km": 4000, "months": 6 }, "noteFa": "فقط روغن تمام‌سنتتیک SN 10W40" },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 10000 } },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 40000 } },
+        { "partId": "fuel_filter_in_tank", "action": "replace", "normal": { "km": 160000 } },
+        { "partId": "timing_belt", "action": "replace", "severe": { "km": 40000 }, "confidence": "unverified", "noteFa": "عدد شرایط عادی در دفترچه خوانا نبود" },
+        { "partId": "manual_gearbox_oil", "action": "replace", "normal": { "km": 40000, "months": 24 } },
+        { "partId": "cvt_oil", "action": "replace", "normal": { "km": 60000, "months": 24 }, "noteFa": "چک هر ۳۰۰۰۰ کیلومتر" },
+        { "partId": "coolant", "action": "replace", "normal": { "km": 60000, "months": 36 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 60000 }, "confidence": "unverified", "noteFa": "تقریبی؛ چک سطح ماهانه" },
+        { "partId": "battery", "action": "inspect", "normal": { "months": 12 } },
+        { "partId": "tire_rotation", "action": "perform", "normal": { "km": 10000 }, "noteFa": "فشار باد ماهانه" }
+      ]
+    },
+    {
+      "id": "zamyad-padra-plus",
+      "makerId": "zamyad",
+      "models": [{ "id": "padra-plus", "nameFa": "پادرا پلاس" }],
+      "confidence": "official",
+      "sourceFa": "دفترچه پادرا پلاس",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 5000, "months": 6 }, "severe": { "km": 2500, "months": 3 } },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 5000 }, "severe": { "km": 2500, "months": 3 }, "noteFa": "گردوغبار: تمیزکاری هر ۱۰۰۰ کیلومتر" },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 } },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 20000 } },
+        { "partId": "belts", "action": "replace", "normal": { "km": 40000, "months": 30 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 30000, "months": 24 } },
+        { "partId": "coolant", "action": "replace", "normal": { "km": 40000, "months": 24 } },
+        { "partId": "gearbox_oil", "action": "replace", "normal": { "km": 30000, "months": 24 }, "severe": { "km": 20000, "months": 12 } },
+        { "partId": "differential_oil", "action": "replace", "normal": { "km": 50000, "months": 36 }, "severe": { "km": 20000, "months": 12 }, "noteFa": "اولین تعویض ۱۰۰۰۰ کیلومتر" }
+      ]
+    },
+    {
+      "id": "ikco-dena-family",
+      "makerId": "ikco",
+      "models": [
+        { "id": "dena", "nameFa": "دنا" },
+        { "id": "dena-plus", "nameFa": "دنا پلاس" },
+        { "id": "dena-plus-turbo", "nameFa": "دنا پلاس توربو" }
+      ],
+      "confidence": "official",
+      "sourceFa": "کتابچه راهنمای دنا",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 10000, "months": 12 }, "severe": { "km": 5000, "months": 6 }, "noteFa": "روغن SL 10W40 به بالا" },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 } },
+        { "partId": "cabin_filter", "action": "replace", "normal": { "km": 10000 } },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 } },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 20000 }, "confidence": "unverified" },
+        { "partId": "timing_and_accessory_belt", "action": "replace", "normal": { "km": 80000, "months": 36 }, "severe": { "km": 40000, "months": 18 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 40000, "months": 24 }, "noteFa": "DOT4" },
+        { "partId": "coolant", "action": "replace", "normal": { "months": 24 }, "noteFa": "پایه ارگانیک" },
+        { "partId": "automatic_gearbox_oil", "action": "replace", "normal": { "km": 40000, "months": 60 }, "severe": { "km": 20000 }, "noteFa": "چک سطح هر ۱۰۰۰۰ کیلومتر" },
+        { "partId": "power_steering_fluid", "action": "inspect", "normal": { "km": 10000 }, "noteFa": "D-II؛ فقط بازدید و تکمیل" }
+      ]
+    },
+    {
+      "id": "ikco-tara",
+      "makerId": "ikco",
+      "models": [{ "id": "tara", "nameFa": "تارا" }],
+      "confidence": "official",
+      "sourceFa": "دفترچه تارا اتوماتیک",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 10000, "months": 12 }, "severe": { "km": 5000, "months": 6 } },
+        { "partId": "timing_and_accessory_belt", "action": "replace", "normal": { "km": 80000, "months": 36 }, "severe": { "km": 40000, "months": 18 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 40000, "months": 24 } },
+        { "partId": "coolant", "action": "replace", "normal": { "months": 24 }, "noteFa": "پایه ارگانیک" },
+        { "partId": "automatic_gearbox_oil", "action": "replace", "normal": { "km": 40000, "months": 60 }, "severe": { "km": 20000, "months": 30 }, "noteFa": "گیربکس ۶ سرعته DAE" },
+        { "partId": "manual_gearbox_oil", "action": "inspect", "noteFa": "طبق دفترچه فقط بازدید" },
+        { "partId": "filters_and_plugs", "action": "replace", "normal": { "km": 10000, "months": 12 }, "confidence": "unverified", "noteFa": "در دفترچه خوانا نبود؛ موقتاً هم‌سان سرویس ۱۰ هزاری" }
+      ]
+    },
+    {
+      "id": "ikco-haima",
+      "makerId": "ikco",
+      "models": [
+        { "id": "haima-s5", "nameFa": "هایما S5" },
+        { "id": "haima-s7", "nameFa": "هایما S7" }
+      ],
+      "confidence": "official",
+      "sourceFa": "دفترچه گارانتی هایما",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 7500, "months": 6 }, "noteFa": "سرویس اول ۵۰۰۰ کیلومتر یا ۶ ماه" },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 15000, "months": 12 }, "confidence": "unverified" },
+        { "partId": "cabin_filter", "action": "replace", "normal": { "km": 15000, "months": 12 }, "confidence": "unverified" },
+        { "partId": "timing_chain", "action": "inspect", "noteFa": "زنجیر است؛ تعویض دوره‌ای ندارد" },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 22500, "months": 18 }, "severe": { "months": 12 }, "noteFa": "اولین تعویض ۲۰۰۰۰ کیلومتر" },
+        { "partId": "coolant", "action": "replace", "normal": { "km": 27500, "months": 24 }, "confidence": "unverified" },
+        { "partId": "automatic_gearbox_oil", "action": "replace", "normal": { "km": 20000, "months": 18 }, "noteFa": "بعدی ۴۲۵۰۰ کیلومتر یا ۳۶ ماه" }
+      ]
+    },
+    {
+      "id": "ikco-tu-family",
+      "makerId": "ikco",
+      "models": [
+        { "id": "206-tip2", "nameFa": "۲۰۶ تیپ ۲" },
+        { "id": "206-tip5", "nameFa": "۲۰۶ تیپ ۵ و ۶" },
+        { "id": "206-sd", "nameFa": "۲۰۶ صندوق‌دار" },
+        { "id": "207", "nameFa": "۲۰۷" },
+        { "id": "rana", "nameFa": "رانا" },
+        { "id": "rana-plus", "nameFa": "رانا پلاس" },
+        { "id": "301", "nameFa": "پژو ۳۰۱" }
+      ],
+      "confidence": "inferred",
+      "sourceFa": "استنباطی: موتور سری TU مشترک با تارا؛ فیلترها طبق الگوی دنا",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 10000, "months": 12 }, "severe": { "km": 5000, "months": 6 } },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 } },
+        { "partId": "cabin_filter", "action": "replace", "normal": { "km": 10000 } },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 } },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 20000 } },
+        { "partId": "timing_and_accessory_belt", "action": "replace", "normal": { "km": 80000, "months": 36 }, "severe": { "km": 40000, "months": 18 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 40000, "months": 24 } },
+        { "partId": "coolant", "action": "replace", "normal": { "months": 24 } },
+        { "partId": "manual_gearbox_oil", "action": "inspect", "noteFa": "بازدید و تکمیل" },
+        { "partId": "automatic_gearbox_oil", "action": "replace", "normal": { "km": 40000, "months": 60 }, "severe": { "km": 20000, "months": 30 }, "noteFa": "فقط مدل‌های اتوماتیک" }
+      ]
+    },
+    {
+      "id": "ikco-xu7-family",
+      "makerId": "ikco",
+      "models": [
+        { "id": "405", "nameFa": "پژو ۴۰۵" },
+        { "id": "pars-xu7", "nameFa": "پارس XU7" },
+        { "id": "pars-xu7p", "nameFa": "پارس XU7P" },
+        { "id": "samand-lx", "nameFa": "سمند LX" }
+      ],
+      "confidence": "inferred",
+      "sourceFa": "استنباطی: جدول ۱۴۰۵ ایران‌خودرو + الگوی دنا؛ تسمه‌ها محافظه‌کارانه",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 10000, "months": 12 }, "severe": { "km": 5000, "months": 6 } },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 } },
+        { "partId": "cabin_filter", "action": "replace", "normal": { "km": 10000 } },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 } },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 20000 } },
+        { "partId": "timing_belt", "action": "replace", "normal": { "km": 60000, "months": 36 }, "severe": { "km": 40000, "months": 18 } },
+        { "partId": "accessory_belt", "action": "replace", "normal": { "km": 60000, "months": 36 }, "severe": { "km": 40000, "months": 18 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 40000, "months": 24 } },
+        { "partId": "coolant", "action": "replace", "normal": { "months": 24 } },
+        { "partId": "manual_gearbox_oil", "action": "inspect", "noteFa": "بازدید و تکمیل" }
+      ]
+    },
+    {
+      "id": "ikco-ef7-family",
+      "makerId": "ikco",
+      "models": [
+        { "id": "samand-ef7", "nameFa": "سمند EF7" },
+        { "id": "soren", "nameFa": "سورن" },
+        { "id": "soren-plus", "nameFa": "سورن پلاس" },
+        { "id": "sarir", "nameFa": "سریر" },
+        { "id": "arisan", "nameFa": "آریسان" },
+        { "id": "rira", "nameFa": "ریرا" }
+      ],
+      "confidence": "inferred",
+      "sourceFa": "استنباطی: موتور EF7 مشترک با دنا (ریرا نیاز به تأیید)",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 10000, "months": 12 }, "severe": { "km": 5000, "months": 6 } },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 } },
+        { "partId": "cabin_filter", "action": "replace", "normal": { "km": 10000 } },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 }, "noteFa": "دوگانه‌سوز: فیلتر گاز هم بازدید شود" },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 20000 } },
+        { "partId": "timing_and_accessory_belt", "action": "replace", "normal": { "km": 80000, "months": 36 }, "severe": { "km": 40000, "months": 18 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 40000, "months": 24 }, "noteFa": "DOT4" },
+        { "partId": "coolant", "action": "replace", "normal": { "months": 24 } },
+        { "partId": "automatic_gearbox_oil", "action": "replace", "normal": { "km": 40000, "months": 60 }, "severe": { "km": 20000 }, "noteFa": "فقط مدل‌های اتوماتیک" },
+        { "partId": "power_steering_fluid", "action": "inspect", "normal": { "km": 10000 } }
+      ]
+    },
+    {
+      "id": "ikco-peugeot-thp",
+      "makerId": "ikco",
+      "models": [
+        { "id": "2008", "nameFa": "پژو ۲۰۰۸" },
+        { "id": "508", "nameFa": "پژو ۵۰۸" }
+      ],
+      "confidence": "inferred",
+      "sourceFa": "استنباطی: موتور THP زنجیری + الگوی ایران‌خودرو",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 10000, "months": 12 }, "severe": { "km": 5000, "months": 6 }, "noteFa": "فقط روغن تمام‌سنتتیک" },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 } },
+        { "partId": "cabin_filter", "action": "replace", "normal": { "km": 10000 } },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 20000 } },
+        { "partId": "timing_chain", "action": "inspect", "noteFa": "زنجیری؛ تعویض دوره‌ای ندارد" },
+        { "partId": "accessory_belt", "action": "replace", "normal": { "km": 80000, "months": 36 }, "severe": { "km": 40000, "months": 18 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 40000, "months": 24 } },
+        { "partId": "coolant", "action": "replace", "normal": { "months": 24 } },
+        { "partId": "automatic_gearbox_oil", "action": "replace", "normal": { "km": 40000, "months": 60 }, "severe": { "km": 20000, "months": 30 } }
+      ]
+    },
+    {
+      "id": "saipa-pride-family",
+      "makerId": "saipa",
+      "models": [
+        { "id": "pride-131", "nameFa": "پراید ۱۳۱" },
+        { "id": "pride-132", "nameFa": "پراید ۱۳۲" },
+        { "id": "pride-151", "nameFa": "پراید ۱۵۱ (وانت)" },
+        { "id": "saba", "nameFa": "صبا" }
+      ],
+      "confidence": "inferred",
+      "sourceFa": "استنباطی: جدول عمومی سایپا + اعداد شرایط سخت دفترچه ۱۵۱",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 5000, "months": 6 }, "severe": { "km": 5000, "months": 6 } },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 20000, "months": 24 } },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 40000 } },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 40000 } },
+        { "partId": "timing_belt", "action": "replace", "normal": { "km": 60000, "months": 72 }, "severe": { "km": 50000 }, "noteFa": "شرایط سخت از دفترچه ۱۵۱" },
+        { "partId": "accessory_belt", "action": "replace", "normal": { "km": 40000, "months": 48 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 60000, "months": 72 } },
+        { "partId": "coolant", "action": "replace", "normal": { "km": 60000, "months": 36 } },
+        { "partId": "manual_gearbox_oil", "action": "replace", "normal": { "km": 30000, "months": 36 } },
+        { "partId": "front_brake_pads", "action": "inspect", "normal": { "km": 10000, "months": 12 }, "noteFa": "تعویض بر اساس سایش" }
+      ]
+    },
+    {
+      "id": "saipa-sahand-aria",
+      "makerId": "saipa",
+      "models": [
+        { "id": "sahand", "nameFa": "سهند" },
+        { "id": "aria", "nameFa": "آریا" }
+      ],
+      "confidence": "inferred",
+      "sourceFa": "استنباطی: پلتفرم و موتور مشترک با شاهین",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 5000, "months": 6 }, "severe": { "km": 4000, "months": 6 }, "noteFa": "روغن تمام‌سنتتیک" },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 10000 } },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 40000 } },
+        { "partId": "fuel_filter_in_tank", "action": "replace", "normal": { "km": 160000 } },
+        { "partId": "timing_belt", "action": "replace", "normal": { "km": 60000, "months": 72 }, "severe": { "km": 40000 } },
+        { "partId": "manual_gearbox_oil", "action": "replace", "normal": { "km": 40000, "months": 24 } },
+        { "partId": "cvt_oil", "action": "replace", "normal": { "km": 60000, "months": 24 }, "noteFa": "فقط مدل‌های CVT" },
+        { "partId": "coolant", "action": "replace", "normal": { "km": 60000, "months": 36 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 60000 } },
+        { "partId": "battery", "action": "inspect", "normal": { "months": 12 } },
+        { "partId": "tire_rotation", "action": "perform", "normal": { "km": 10000 } }
+      ]
+    },
+    {
+      "id": "zamyad-z24",
+      "makerId": "zamyad",
+      "models": [{ "id": "z24", "nameFa": "زامیاد Z24" }],
+      "confidence": "inferred",
+      "sourceFa": "استنباطی: هم‌خانواده پادرا (زامیاد)",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 5000, "months": 6 }, "severe": { "km": 2500, "months": 3 } },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 5000 }, "severe": { "km": 2500, "months": 3 } },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 10000 }, "severe": { "km": 5000 } },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 20000 } },
+        { "partId": "belts", "action": "replace", "normal": { "km": 40000, "months": 30 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 30000, "months": 24 } },
+        { "partId": "coolant", "action": "replace", "normal": { "km": 40000, "months": 24 } },
+        { "partId": "gearbox_oil", "action": "replace", "normal": { "km": 30000, "months": 24 }, "severe": { "km": 20000, "months": 12 } },
+        { "partId": "differential_oil", "action": "replace", "normal": { "km": 50000, "months": 36 }, "severe": { "km": 20000, "months": 12 }, "noteFa": "اولین تعویض ۱۰۰۰۰ کیلومتر" }
+      ]
+    },
+    {
+      "id": "parskhodro-tondar90",
+      "makerId": "parskhodro",
+      "models": [{ "id": "tondar90", "nameFa": "تندر ۹۰" }],
+      "confidence": "inferred",
+      "sourceFa": "استنباطی: جدول عمومی گروه سایپا (موتور رنو)",
+      "items": [
+        { "partId": "engine_oil", "action": "replace", "normal": { "km": 10000, "months": 12 }, "severe": { "km": 5000, "months": 6 } },
+        { "partId": "air_filter", "action": "replace", "normal": { "km": 20000, "months": 24 } },
+        { "partId": "cabin_filter", "action": "replace", "normal": { "km": 10000, "months": 12 } },
+        { "partId": "fuel_filter", "action": "replace", "normal": { "km": 40000 } },
+        { "partId": "spark_plugs", "action": "replace", "normal": { "km": 40000 } },
+        { "partId": "timing_belt", "action": "replace", "normal": { "km": 60000, "months": 72 }, "severe": { "km": 40000 } },
+        { "partId": "accessory_belt", "action": "replace", "normal": { "km": 40000, "months": 48 } },
+        { "partId": "brake_fluid", "action": "replace", "normal": { "km": 60000, "months": 72 } },
+        { "partId": "coolant", "action": "replace", "normal": { "km": 60000, "months": 36 } },
+        { "partId": "manual_gearbox_oil", "action": "replace", "normal": { "km": 30000, "months": 36 } },
+        { "partId": "automatic_gearbox_oil", "action": "replace", "normal": { "km": 60000, "months": 24 }, "noteFa": "فقط مدل‌های اتوماتیک" },
+        { "partId": "power_steering_fluid", "action": "replace", "normal": { "km": 60000, "months": 72 } }
+      ]
+    }
+  ]
+}
