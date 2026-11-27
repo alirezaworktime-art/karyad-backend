@@ -8,7 +8,9 @@ import { Catalog, catalogSchema } from './domain/catalog.schema.js';
 
 export interface LoadedCatalog {
   catalog: Catalog;
-  /** Strong ETag of the raw file, so clients can skip unchanged downloads. */
+  /** Pre-serialized JSON, built once so requests never re-stringify. */
+  body: string;
+  /** Strong ETag of the body, so clients can skip unchanged downloads. */
   etag: string;
 }
 
@@ -38,7 +40,8 @@ export class CatalogRepository implements OnModuleInit {
   static async loadFromFile(path: string): Promise<LoadedCatalog> {
     const raw = await readFile(path, 'utf8');
     const catalog = catalogSchema.parse(JSON.parse(raw));
-    const etag = `"${createHash('sha256').update(raw).digest('hex').slice(0, 32)}"`;
-    return { catalog, etag };
+    const body = JSON.stringify(catalog);
+    const etag = `"${createHash('sha256').update(body).digest('hex').slice(0, 32)}"`;
+    return { catalog, body, etag };
   }
 }

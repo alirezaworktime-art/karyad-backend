@@ -13,14 +13,14 @@ export class CatalogController {
     @Headers('if-none-match') ifNoneMatch: string | undefined,
     @Res() res: Response,
   ): void {
-    const { catalog, etag } = this.catalogService.getCatalog();
+    const { body, etag } = this.catalogService.getCatalog();
     res.setHeader('ETag', etag);
     res.setHeader('Cache-Control', 'public, max-age=3600');
     if (ifNoneMatch === etag) {
       res.status(304).end();
       return;
     }
-    res.status(200).json(catalog);
+    res.status(200).type('application/json').send(body);
   }
 
   @Get('version')

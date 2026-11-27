@@ -14,6 +14,13 @@ export const envSchema = z.object({
   ANDROID_LATEST_VERSION: z.string().default('0.1.0'),
   ANDROID_MIN_SUPPORTED_VERSION: z.string().default('0.1.0'),
   ANDROID_DOWNLOAD_URL: z.string().url().optional(),
+  /** Requests allowed per client IP per minute before HTTP 429. */
+  RATE_LIMIT_PER_MINUTE: z.coerce.number().int().positive().default(120),
+  /**
+   * Number of reverse proxies / load balancers in front of the service, so
+   * rate limiting sees the real client IP. 0 when exposed directly.
+   */
+  TRUST_PROXY_HOPS: z.coerce.number().int().min(0).default(0),
 });
 
 export type Env = z.infer<typeof envSchema>;

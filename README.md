@@ -36,6 +36,7 @@ npm run start:dev          # http://localhost:3000/api/health
 | `npm run lint` | Oxlint with type-aware rules |
 | `npm run typecheck` | TypeScript, no emit |
 | `npm run ci` | Everything CI runs, in the same order |
+| `npm run loadtest` | Load test the built server (run `npm run build` first) |
 
 ## API (v1)
 
@@ -51,6 +52,7 @@ npm run start:dev          # http://localhost:3000/api/health
 
 - [Architecture](docs/ARCHITECTURE.md)
 - [Editing the maintenance catalog](docs/CATALOG.md)
+- [Reliability and scale](docs/RELIABILITY.md)
 - [Contributing](CONTRIBUTING.md)
 
 ## Docker
